@@ -26,14 +26,14 @@ class CallbackViewController: BaseViewController {
     
     private func downloadImage() async throws -> UIImage? {
         let image: UIImage? = try await withCheckedThrowingContinuation { continuation in
-            session.dataTask(with: ImageURL.errorLink) { data, response, error in
+            session.dataTask(with: ImageURL.구글) { data, response, error in
                 switch (data, error) {
                 case (let data?, nil):
                     continuation.resume(returning: UIImage(data: data))
                 case (nil, let error?):
                     continuation.resume(throwing: error)
                 default:
-                    continuation.resume(throwing: "에러")
+                    continuation.resume(throwing: "데이터와 에러가 동시에 들어옴")
                 }
             }.resume()
         }

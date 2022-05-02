@@ -27,7 +27,7 @@ class DelegateViewController: BaseViewController {
     }
     
     private func downloadImage() async throws -> UIImage? {
-        let task = session.dataTask(with: ImageURL.칼)
+        let task = session.dataTask(with: ImageURL.구글)
         task.resume()
         
         let imageData: Data = try await withCheckedThrowingContinuation { continuation in
