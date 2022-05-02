@@ -14,21 +14,12 @@ class CallbackViewController: BaseViewController {
         return URLSession(configuration: config, delegate: nil, delegateQueue: nil)
     }()
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        tabBarItem.title = "callback"
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func buttonTapped(_ sender: UIButton) {
         Task {
             do {
-                self.imageView.image = try await downloadImage()
+                imageView.image = try await downloadImage()
             } catch {
-                print(error)
+                print("⚠️ \(error)")
             }
         }
     }
@@ -49,4 +40,14 @@ class CallbackViewController: BaseViewController {
         
         return image
     }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        tabBarItem.title = "callback"
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

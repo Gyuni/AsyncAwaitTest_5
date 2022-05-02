@@ -8,9 +8,9 @@
 import Foundation
 
 enum ImageURL {
-    static let 박수치는_사진 = URL(string: "https://www.apple.com/newsroom/images/environments/stores/Apple-Myeongdong-opening-day-opening-walk-in_big.jpg.large_2x.jpg")!
+    static let 톱니바퀴 = URL(string: "https://blog.banksalad.com/static/d7e458bfbe705f3116c399a4f7514a7b/846d5/thumbnail.jpg")!
     
-    static let 정면_사진 = URL(string: "https://www.apple.com/newsroom/images/environments/stores/Apple-Myeongdong-opening-preview-hero_Full-Bleed-Image.jpg.large_2x.jpg")!
+    static let 칼 = URL(string: "https://blog.banksalad.com/static/2e6b6d90a6afd3e2d74fabe20de4cf95/846d5/blog_thumbnail.jpg")!
     
     static let errorLink = URL(string: "https://maybe.no.link/right?")!
 }
